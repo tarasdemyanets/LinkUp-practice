@@ -4,9 +4,9 @@
 # * constructors
 # * class methods
 # * factory methods
-#   
+#
 # * [Options Hashes] ( http://stackoverflow.com/questions/1515577/factory-methods-in-ruby#1516824 )
-#   
+#
 #
 # # Hints
 #
@@ -81,8 +81,8 @@ describe Temperature do
   describe "can be constructed via factory methods" do
 
     it "in degrees celsius" do
-      expect(Temperature.from_celsius(50).in_celsius).to be_within(0.01).of( 50)
-      expect(Temperature.from_celsius(50).in_fahrenheit).to be_within(0.01).of( 122);
+      expect(Temperature.from_celsius(50).in_celsius).to be_within(0.01).of(50)
+      expect(Temperature.from_celsius(50).in_fahrenheit).to be_within(0.01).of(122);
     end
 
     it "in degrees fahrenheit" do
@@ -100,7 +100,16 @@ describe Temperature do
   # run *all* the tests during your refactoring, to make sure you did it right
   #
   describe "utility class methods" do
-
+    describe "fraenheit to celsius" do
+      it "at boiling" do
+        expect(Temperature.new(:f => 212).ftoc).to be_within(0.01).of( 100.0)
+      end
+    end
+    describe 'Celsius to Farenheit' do
+      it 'human body temperature' do
+        expect( Temperature.new(:c => 37).ctof).to be_within(0.01).of(98.6)
+      end
+    end
   end
 
   # Here's another way to solve the problem!

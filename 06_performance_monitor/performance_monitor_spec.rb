@@ -35,9 +35,9 @@ describe "Performance Monitor" do
     ## has been updated with Rspec 3.  The now form syntax is:
     # old:
     # Time.stub(:now).and_return( @eleven_am )
-    # new: 
+    # new:
     allow(Time).to receive(:now).and_return( @eleven_am)
-    
+
 
     elapsed_time = measure do
     end
@@ -77,7 +77,7 @@ describe "Performance Monitor" do
     average_time = measure(4) do
       @fake_time += run_times.pop
     end
-    expect(average_time).to eql( 6.5)
+    expect(average_time).to eql(6.5)
   end
 
   it "returns the average time when running a random number of times for random lengths of time" do
