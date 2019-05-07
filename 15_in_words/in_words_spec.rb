@@ -69,20 +69,20 @@ describe Fixnum do
   end
 
   it "reads hundreds" do
-    expect(100.in_words).to eq( 'one hundred')
-    expect(200.in_words).to eq( 'two hundred')
-    expect(300.in_words).to eq( 'three hundred')
-    expect(123.in_words).to eq( 'one hundred twenty three')
-    expect(777.in_words).to eq( 'seven hundred seventy seven')
-    expect(818.in_words).to eq( 'eight hundred eighteen')
-    expect(512.in_words).to eq( 'five hundred twelve')
-    expect(999.in_words).to eq( 'nine hundred ninety nine')
+    expect(100.in_words).to eq('one hundred')
+    expect(200.in_words).to eq('two hundred')
+    expect(300.in_words).to eq('three hundred')
+    expect(123.in_words).to eq('one hundred twenty three')
+    expect(777.in_words).to eq('seven hundred seventy seven')
+    expect(818.in_words).to eq('eight hundred eighteen')
+    expect(512.in_words).to eq('five hundred twelve')
+    expect(999.in_words).to eq('nine hundred ninety nine')
   end
 
   it "reads thousands" do
-    expect(1000.in_words).to eq( 'one thousand')
-    expect(32767.in_words).to eq( 'thirty two thousand seven hundred sixty seven')
-    expect(32768.in_words).to eq( 'thirty two thousand seven hundred sixty eight')
+    expect(1000.in_words).to eq('one thousand')
+    expect(32_767.in_words).to eq('thirty two thousand seven hundred sixty seven')
+    expect(32_768.in_words).to eq('thirty two thousand seven hundred sixty eight')
   end
 
   it "reads millions" do
