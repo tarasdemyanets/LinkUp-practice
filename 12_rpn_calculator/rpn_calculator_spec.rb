@@ -37,7 +37,6 @@
 require "rpn_calculator"
 
 describe RPNCalculator do
-
   attr_accessor :calculator
 
   before do
@@ -56,9 +55,9 @@ describe RPNCalculator do
     calculator.push(3)
     calculator.push(4)
     calculator.plus
-    expect(calculator.value).to eq( 7)
+    expect(calculator.value).to eq(7)
     calculator.plus
-    expect(calculator.value).to eq( 9)
+    expect(calculator.value).to eq(9)
   end
 
   it "subtracts the second number from the first number" do
@@ -99,7 +98,7 @@ describe RPNCalculator do
       expect(calculator.value).to eq( (1+2)*3)
     end
 
-    it "calculates second ordering" do 
+    it "calculates second ordering" do
       # 1 2 3 * + => 1 + (2 * 3)
       calculator.push(1)
       calculator.push(2)
