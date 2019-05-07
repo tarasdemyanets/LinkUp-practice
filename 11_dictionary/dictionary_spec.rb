@@ -61,7 +61,7 @@ describe Dictionary do
 
   it "finds an entry" do
     @d.add('fish' => 'aquatic animal')
-    expect(@d.find('fish')).to eql({'fish' => 'aquatic animal'})
+    expect(@d.find('fish')).to eql('fish' => 'aquatic animal')
   end
 
   it 'finds multiple matches from a prefix and returns the entire entry (keyword + definition)' do
