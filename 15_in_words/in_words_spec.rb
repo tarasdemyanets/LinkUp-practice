@@ -98,5 +98,4 @@ describe Fixnum do
     expect(1_000_000_000_001.in_words).to eq( 'one trillion one')
     expect(1_888_259_040_036.in_words).to eq( 'one trillion eight hundred eighty eight billion two hundred fifty nine million forty thousand thirty six')
   end
-
 end
